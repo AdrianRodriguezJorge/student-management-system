@@ -1,0 +1,32 @@
+# Dependencias y entornos de ejecución
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+/backend/.venv/
+/backend/venv/
+/backend/env/
+
+# Caché de Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+
+# Variables de entorno y llaves privadas
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Bases de datos locales (SQLite o volcados)
+**/*.db
+**/*.sqlite3
+
+# Archivos de configuración de editores y del sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
