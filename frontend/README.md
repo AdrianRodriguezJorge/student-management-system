@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Academic Control System - Frontend Client
 
-## Getting Started
+This is the frontend client for the School Academic Control System, built with **Next.js** (App Router), **React**, and **Tailwind CSS**. It provides a light-themed administrative dashboard utilizing a soft pastel green color palette.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎨 Theme & UI Design
+* **Design system**: Clean light mode.
+* **Palette**: Soft emerald and pastel green tones (`bg-emerald-50/40`, `text-emerald-950`, `border-emerald-150`).
+* **Visual cues**: Responsive grid layout, interactive drawers/tabs for transitioning between Students and Subjects, and custom green/rose badges indicating passing or failing GPAs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Code Structure
+* **`app/page.tsx`**: Main component housing the state logic, API fetch requests, validation feedback, and forms.
+* **`app/layout.tsx`**: Sets up global document metadata, viewport, and HTML structure.
+* **`app/globals.css`**: Configures Tailwind CSS imports.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚡ Main Features
 
-To learn more about Next.js, take a look at the following resources:
+1. **Matricula & Subject Management Tabs**:
+   * Switch between the **Students** enrollment table and the list of **Subjects** instantly.
+2. **Academic Drawer**:
+   * Selecting a student opens a dedicated panel showing their current course load, grade values, and a form to register new marks.
+3. **Safety Modal Deletions**:
+   * When deleting a subject, if the backend indicates that registered grades exist, the frontend prompts the user with a confirmation warning before sending the force delete request.
+4. **Form validations**:
+   * Client-side validation ensuring numeric inputs (age and grades) adhere to business logic boundaries before hitting the server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ How to Run
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the local Next.js Turbopack development server:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:3000` to view the application.
